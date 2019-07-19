@@ -40,20 +40,20 @@ We can see that we're referencing path helpers in the``` index.html.erb``` file 
 
 
 ### The Index Page
-Lets focus on how this method is being used on the index page first.
+Lets focus on how this path helper method is being used on the index page first.
 ```
   def index
     @songs = Song.all
   end
 ```
-In our songs_controller.rb, we're creating an insance variable @songs that contains all songs in the db.
+In our songs_controller.rb, we're creating an instance variable ```@songs``` that contains all songs in the database.
 
 ```
   <% @songs.each do |song| %>
     <div><%= link_to song.name, song_path(song) %> by <%= song.artist %></div>
   <% end %>
 ```
-Then in our ```index.html.erb file```, we're iterating through ```@songs``` to get to each song object. Since we want to display each song name and link to it's show page, for each iteration  we'll use the link_to method (another Rails helper) to say we want the link text to be song.name and we want to call the built in path helper method for the show page on that song id.  
+Then in our ```index.html.erb file```, we're iterating through ```@songs``` to get to each song object. Since we want to display each song name and link to it's show page, for each iteration  we'll use the link_to method (another Rails helper) to say we want the link text to be song.name and we want to call the built in path helper method - ```song_path(song)``` for the show page on that song id.  
 
 Side note: although we're passing along the whole song instance in ```song_path(song)```, Rails is just using the song ID. We could just as easily have used ```song_path(song.id)```.
 
