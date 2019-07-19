@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "Rails Route Helper Methods"
-date:       2019-07-19 21:47:55 +0000
+date:       2019-07-19 17:47:56 -0400
 permalink:  rails_route_helper_methods
 ---
 
@@ -28,7 +28,6 @@ Let's say we have a new Rails app that creates and stores a list of songs with t
 
 
 We'll want to have an index page that lists all of the songs, a new page where a new song can be created, and a show page where individual song data can be found so our ```config/routes.rb``` file will look like the below:
-
 ![Imgur](https://i.imgur.com/bsfoTmW.png)
 
 We'll want to create methods for each of our routes, so our ```app/controllers/songs_controller.rb``` file will have the following:
