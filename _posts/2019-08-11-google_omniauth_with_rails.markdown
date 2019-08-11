@@ -121,6 +121,8 @@ def auth
 end
 ```
 	
+## Conclusion
+As you can see, there are a lot of moving parts when setting up Google Omniauth, but a bit of work up front saves you (during testing) and your app's users time when logging in.  
 
 	
 	
