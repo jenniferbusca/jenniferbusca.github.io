@@ -8,8 +8,10 @@ permalink:  google_omniauth_with_rails
 
 For this project, I decided to create an app called Travel Buddy that helps with scheduling all of the activities that you have coming up in your trip. One of the requirements was using some form of OmniAuth and I decided to use Google.  Setting up your app to login with Google OmniAuth is a bit tricky, but it's worth it since it makes the user's sign in process seamless.
 
+
 ## Google Developer console
-1) Go to https://console.developers.google.com/api and click on the dropdown next to the Google API logo.
+
+2) 1) Go to https://console.developers.google.com/api and click on the dropdown next to the Google API logo.
 
 2) Select "New Project"
 
@@ -23,7 +25,9 @@ For this project, I decided to create an app called Travel Buddy that helps with
 6) Go to "Credentials" and click on "Create Credentials" and select "OAuth Client ID" from the dropdown, then select Web Application. Under the "Authorized Redirect URI" section, add in the url that will be redirecting to your the Google callback url. For example, http://localhost:3000/auth/google_oauth2/callback since I am running this on a localhost. Hit "Create". Save the client id and client secret for later.
 ![Imgur](https://imgur.com/TsniQWA.png)
 
+
 ## Gemfile
+
 In your gemfile, insert the below gems, then run `bundle install`.
 
 `gem 'omniauth-google-oauth2'`
@@ -32,7 +36,9 @@ In your gemfile, insert the below gems, then run `bundle install`.
 
 `gem 'dotenv-rails'`
 
+
 ## Initializers
+
 In  `config/initializers/omniauth.rb` , add the following:
 
 ```
@@ -48,7 +54,9 @@ Since this is a test app, I decided to bypass a couple security checks and used 
 	
 	`skip_jwt: true` - this ignores JWT failures
 	
+
 ## .env File
+
 In the root folder, create a file called `.env`. Inside this file, insert your Google key and secret from the credentials that we created earlier:
 ```
 GOOGLE_KEY = your google key here
@@ -57,6 +65,7 @@ GOOGLE_SECRET = your google secret here
 
 Be sure to add this file to your .gitignore file to avoid your keys and secret from being published!
 	
+
 ##  Users Table
 
 To your `:users` table, add the following columns as strings:
@@ -67,6 +76,7 @@ To your `:users` table, add the following columns as strings:
 
 `image`
 
+
 ## Routes
 	
 In `config/routes.rb`
@@ -75,11 +85,13 @@ In `config/routes.rb`
 
 ` get 'auth/failure', to: redirect('/')`
 
+
 ## View
 
  In your view for your app's login page, you can use to below link_to, to initiate the Google Omniauth login process:
  
  `<%= link_to "Login with Google", 'auth/google_oauth2/' %>`
+ 
  
 ## Sessions Controller
 
