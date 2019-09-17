@@ -20,10 +20,15 @@ The `let` keyword allows variables to be defined with block or function scope. T
 The `const` keyword allows variables to be defined with block or function scope similar to `let`, however, it cannot be re-assigned. Although `const` variables cannot be re-assigned, their properties can be changed. 
 ```
 const food = "cheese"
-food = "apple" // This will produce and error
+food = "apple" 
+//Uncaught TypeError: Assignment to constant variable.
+    at <anonymous>:1:6
 
-const food = {name: "cheese, type: "dairy"}
-food.name = "apple" // This will not produce an error
+const foodObj = {name:"cheese", type:"dairy"};
+
+foodObj.name = "apple"
+console.log(foodObj)
+//{name: "apple", type: "dairy"}
 
 ```
 
