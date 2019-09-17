@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "Javascript Variables"
-date:       2019-09-17 16:35:37 +0000
+date:       2019-09-17 12:35:38 -0400
 permalink:  javascript_variables
 ---
 
@@ -28,6 +28,14 @@ food.name = "apple" // This will not produce an error
 ```
 
 **When to use**: When the variable identifier does not need to be re-assigned
+
+| Variable Type       | var      | let      | const
+| --------            | -------- | -------- | -------- 
+| Can be re-assigned? | Yes      | Yes      |  No
+| Can be hoisted?     | Yes      | No       |  No
+| Global Scope        | Yes      | Yes      |  Yes
+| Function Scope      | Yes      | Yes      |  Yes 
+| Block Scope         | No       | Yes      |  Yes
 
 ## Variable Scope
 
