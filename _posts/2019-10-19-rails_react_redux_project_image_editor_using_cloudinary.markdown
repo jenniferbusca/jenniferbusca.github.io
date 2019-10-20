@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "Rails/React/Redux Project: Image Editor using Cloudinary"
-date:       2019-10-19 18:20:06 +0000
+date:       2019-10-19 14:20:07 -0400
 permalink:  rails_react_redux_project_image_editor_using_cloudinary
 ---
 
@@ -60,8 +60,8 @@ Aside from the image upload solutions that Cloudinary has, they also have transf
  * I'm then mapping over the options to populate them in the dropdown.
  ![Imgur]https://imgur.com/UTtuuYc.png)
  
- ## Conclusion
- There were a lot of moving parts to this project and this blog post is really just touching on one aspect of it. Cloudinary is a really useful and powerful tool once you get the hang of it.
+## Conclusion
+There were a lot of moving parts to this project and this blog post is really just touching on one aspect of it. Cloudinary is a really useful and powerful tool once you get the hang of it.
 
 
 
