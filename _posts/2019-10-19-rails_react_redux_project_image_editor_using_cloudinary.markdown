@@ -53,7 +53,7 @@ I'm using the Cloudinary React SDK when displaying Cloudinary objects in my app 
  * I'm then using `Image` and the `publicId` property that belongs to the Cloudinary Image object to dynamically populate all images in the list.
  * Lastly, I'm using `Transformations` to apply any transformation effects (more on this in a second). 
  
- #### Cloudinary Transformations
+#### Cloudinary Transformations
 Aside from the image upload solutions that Cloudinary has, they also have transformations which allow you to add a large number of filters and effects to your images.  I'm using the `Transformations`  `effect` property in the Image List to update how the image is rendering to the user. 
  ![Imgur]https://imgur.com/eWvKTuV.png)
  * I created a short list of filters that I wanted to include in my app using key:value pairs of the name that I want to display in a dropdown and the value that I want to dynamically send to the `Transformations` `effect` property.
